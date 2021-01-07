@@ -6,15 +6,19 @@ const decrease = document.querySelector("[data-target='decrease']");
 
 
 // Functions
-const increment = (event) => {
+const handleIncrement = (event) => {
   console.log(`Incremented number: `, event.target);
 };
 
-const decrement = (event) => {
+const handleDecrement = (event) => {
   console.log(`Decremented number: `, event.target);
 };
 
+const handleKeyInput = (event) => {
+  console.log(`Decremented number: `, event.target.value);
+};
 
 //  Event Listeners
-increase.addEventListener("click", increment);
-decrease.addEventListener("click", decrement);
+increase.addEventListener("click", handleIncrement);
+decrease.addEventListener("click", handleDecrement);
+input.addEventListener("keydown", handleKeyInput);
