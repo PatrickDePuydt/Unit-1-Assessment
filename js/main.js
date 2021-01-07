@@ -13,26 +13,39 @@ input.value = 100;
 
 
 // Functions
+const updateDOM = (number) => counter.innerText = number;
+const getInitialNumber = () => initialNumber = Number(input.value);
 
 //// Event Handlers
 const handleIncrement = (event) => {
-  console.log(`Incremented number: `, event.target);
+  let originalNumber = getInitialNumber();
+  let increasedNumber =  originalNumber++
+  console.log(`1. increasedNumber:`, increasedNumber + 1);
+
+  finalNumber = increasedNumber;
+  // Get the current number
+  
+
+  // Add to it
+  updateDOM(finalNumber);
+  // console.log(`Incremented number: `, finalNumber);
 };
 
 const handleDecrement = (event) => {
+  getInitialNumber();
   console.log(`Decremented number: `, event.target);
 };
 
 const handleKeyInput = (event) => {
-  initialNumber = Number(input.value);// Make sure the value is a number
+  getInitialNumber();
+
   // console.log(`Decremented number: `, inputNumber);
   finalNumber = initialNumber;
-  counter.innerText = finalNumber;
-  console.log(`1. initialNumber: `, initialNumber);
-
+  updateDOM(finalNumber);
 };
 
 //  Event Listeners
 increase.addEventListener("click", handleIncrement);
 decrease.addEventListener("click", handleDecrement);
 input.addEventListener("keyup", handleKeyInput);
+
