@@ -9,43 +9,30 @@ const decrease = document.querySelector("[data-target='decrease']");
 let finalNumber; // What we will finally display
 let initialNumber; // what number we are starting with
 //// Initiatives
-input.value = 100;
-
+input.value = 1;
 
 // Functions
 const updateDOM = (number) => counter.innerText = number;
-const getInitialNumber = () => initialNumber = Number(input.value);
 
 //// Event Handlers
-const handleIncrement = (event) => {
-  let originalNumber = getInitialNumber();
-  let increasedNumber =  originalNumber++
-  console.log(`1. increasedNumber:`, increasedNumber + 1);
-
-  finalNumber = increasedNumber;
-  // Get the current number
-  
-
-  // Add to it
-  updateDOM(finalNumber);
-  // console.log(`Incremented number: `, finalNumber);
+const handleIncrement = () => {
+  let increment = input.value++;
+  updateDOM(increment);
 };
 
 const handleDecrement = (event) => {
-  getInitialNumber();
-  console.log(`Decremented number: `, event.target);
+  let decrement = input.value--;
+  updateDOM(decrement);
 };
 
-const handleKeyInput = (event) => {
-  getInitialNumber();
-
-  // console.log(`Decremented number: `, inputNumber);
-  finalNumber = initialNumber;
-  updateDOM(finalNumber);
-};
+// const handleKeyInput = (event) => {
+//   // console.log(`Decremented number: `, inputNumber);
+//   finalNumber = initialNumber;
+//   updateDOM(finalNumber);
+// };
 
 //  Event Listeners
 increase.addEventListener("click", handleIncrement);
 decrease.addEventListener("click", handleDecrement);
-input.addEventListener("keyup", handleKeyInput);
+// input.addEventListener("keyup", handleKeyInput);
 
