@@ -23,4 +23,4 @@ const handleKeyInput = (event) => {
 //  Event Listeners
 increase.addEventListener("click", handleIncrement);
 decrease.addEventListener("click", handleDecrement);
-input.addEventListener("keydown", handleKeyInput);
+input.addEventListener("keyup", handleKeyInput);
