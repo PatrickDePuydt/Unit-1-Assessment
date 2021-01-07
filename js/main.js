@@ -6,6 +6,8 @@ const decrease = document.querySelector("[data-target='decrease']");
 
 
 // Functions
+
+//// Event Handlers
 const handleIncrement = (event) => {
   console.log(`Incremented number: `, event.target);
 };
