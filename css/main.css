@@ -21,6 +21,7 @@ button {
   --button-size: 100px;
   --curvature: 5px;
   --input-size: 50px;
+  --transition: .15s all ease-in-out;
 }
 
 input::-webkit-outer-spin-button,
@@ -40,7 +41,6 @@ main {
 }
 
 main article {
-  border: 2px solid coral;
   padding: 100px;
   display: flex;
   flex-direction: column;
@@ -50,7 +50,6 @@ main article {
 
 .input_group {
   margin-top: 100px;
-  border: 2px solid gold;
   display: flex;
 }
 
@@ -62,6 +61,7 @@ h1 {
 }
 
 button {
+  border: 3px solid transparent; /* Setting to transparent for animating later*/
   font-family: sans-serif;
   background: var(--ash);
   color: var(--all-white);
@@ -72,6 +72,14 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--all-white);
+  border-color: var(--ash);
+  color: var(--ash);
 }
 
 input[type="number"] {
@@ -80,4 +88,12 @@ input[type="number"] {
   border: 3px solid var(--ash);
   font-size: var(--input-size);
   width: 300px;
+  text-align: center;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+input:hover {
+  background: var(--ash);
+  color: var(--all-white);
 }
