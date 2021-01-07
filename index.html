@@ -12,12 +12,14 @@
   
   <main>
     <article data-component="input-tracker">
-      <section data-target="counter">0</section>
-      <section>
-        <button data-target="increase">+1</button>
+      <section data-target="counter">
+        <h1 class="counter">0</h1>
+      </section>
+      <section class="input_group">
+        <button data-target="increase">+</button>
         <input type="number" data-target="input-text" name="number_input">
         <!-- Make sure users can only type numbers via the type being set to a number -->
-        <button data-target="decrease">-1</button>
+        <button data-target="decrease">-</button>
       </section>
     </article>
   </main>
