@@ -18,6 +18,7 @@ button {
   --ash: #a9a9a9;
   --true-black: #000;
   --all-white: #fff;
+  --red: #ff0000;
   --button-size: 100px;
   --curvature: 5px;
   --input-size: 50px;
@@ -96,4 +97,8 @@ input[type="number"] {
 input:hover {
   background: var(--ash);
   color: var(--all-white);
+}
+
+.NEGATIVE {
+  color: var(--red);
 }

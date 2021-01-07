@@ -20,14 +20,26 @@ const updateDOM = (number) => {
 }
 
 //// Event Handlers
+
+const handleChange = () => {
+  let number = Math.sign(globalNumber);
+  if (number == -1) {
+    counter.classList.add("NEGATIVE");
+  } else {
+    counter.classList.remove("NEGATIVE");
+  }
+};
+
 const handleIncrement = () => {
   globalNumber = input.value++;
   updateDOM(globalNumber);
+  handleChange();
 };
 
 const handleDecrement = () => {
   globalNumber = input.value--;
   updateDOM(globalNumber);
+  handleChange();
 };
 
 const handleKeyInput = (event) => {
@@ -40,4 +52,3 @@ const handleKeyInput = (event) => {
 increase.addEventListener("click", handleIncrement);
 decrease.addEventListener("click", handleDecrement);
 input.addEventListener("keyup", handleKeyInput);
-
